@@ -1,0 +1,58 @@
+@use "../styles/abstracts/index" as *;
+@use "./Button.scss";
+
+$brd-r: 50%;
+$icon-size: 30px;
+
+.button--float {
+    will-change: transform;
+    transition-property: color, border-color, filter, transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in;
+    outline: $brd-w solid;
+    border-width:$brd-w;
+    font-weight:bold;
+    aspect-ratio: 1;
+    border-radius:$brd-r;
+    padding:$xs-pd;
+
+    img {
+        max-height:$icon-size;
+        max-width:$icon-size;
+    }
+
+    &:hover, &:focus-visible {
+        filter:brightness(1.1);
+        transform:scale(1.1);
+    }
+
+    &:active {
+        filter: brightness(.98);
+        transform:scale(.98);
+    }
+
+    &--primary {
+        @extend .button--float;
+        outline-color: $acc-prim;
+        background-color: $acc-prim;
+        color: $fnt-light;
+
+        &:hover, &:focus-visible {
+            border-color: white;
+        }
+
+        img {
+            filter:invert(1);
+        }
+    }
+
+    &--secondary {
+        @extend .button--float;
+        outline: none;
+        border-color:black;
+        background-color: white;
+        color: $fnt-dark;
+    }
+
+
+}

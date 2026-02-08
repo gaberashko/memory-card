@@ -1,0 +1,46 @@
+@use "../styles/abstracts/index" as *;
+
+$section-border: 1.5px solid rgba(168, 168, 168, 0.466);
+
+form {
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    row-gap: $s-pd;
+
+    label {
+        margin: 0 $s-pd;
+    }
+
+    legend {
+        margin-top: $m-pd;
+        border-bottom: $section-border;
+        color: $fnt-mod;
+        font-size:$m-fnt;
+        font-weight:600;
+        cursor:default;
+    }
+
+    fieldset {
+        border-bottom: $section-border;
+
+        button {
+            display: block;
+            position: relative;
+            margin-left:auto;
+            margin-right: 0;
+            margin-bottom:$s-pd;
+        }
+    }
+
+    fieldset {
+        margin-bottom: $s-pd;
+    }
+
+    #formCard {
+        max-height:100vh;
+        
+    }
+}
+
+

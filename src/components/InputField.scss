@@ -1,0 +1,38 @@
+@use "../styles/abstracts/index" as *;
+
+input, textarea {
+    resize: none;
+    transition:transform $trans-d $trans-tf;
+    background-color:$input-bg;
+    padding: $xs-pd;
+    border: $inp-bord;
+    border-radius: $brd-r;
+
+    &:focus, &focus-visible {
+        outline:none;
+        background-color: $input-focus-bg;
+        border-color: $acc-prim;
+        transform:scale(1.05);
+    }
+
+    &:user-invalid {
+        background-color: $invalid-bg;
+        border-color: $invalid-prim;
+    }
+
+    &:user-valid {
+        border-color:$valid-prim;
+    }
+}
+
+.inputField {
+    margin:$xs-pd 0;
+    display: flex;
+    @include responsive(flex-direction, (xs: column, md: row));
+    align-items:center;
+    justify-content:space-between;
+}
+
+.requiredField {
+    color:red;
+}

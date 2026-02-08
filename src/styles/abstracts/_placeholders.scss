@@ -1,0 +1,6 @@
+@use "./variables" as *;
+
+%scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: $acc-prim $card-bg;
+}

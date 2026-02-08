@@ -1,0 +1,29 @@
+@use "../abstracts/index" as *;
+
+* {
+    color: $fnt-dark;
+}
+
+h1 {
+    @include responsive(font-size, (xs: $l-fnt, md: $xl-fnt));
+}
+
+h2 {
+    @include responsive(font-size, (xs:$m-fnt, md:$l-fnt));
+}
+
+h3 {
+    @include responsive(font-size, (xs:$s-fnt, md:$m-fnt));
+}
+
+h4, h5 {
+    font-size: $m-fnt;
+}
+
+p, label {
+    @include responsive(font-size, (xs: $s-fnt, md:$s-fnt));
+}
+
+b {
+    font-weight:700;
+}

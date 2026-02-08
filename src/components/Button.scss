@@ -1,0 +1,46 @@
+@use "../styles/abstracts/index" as *;
+
+$brd-w: 2px;
+
+.button {
+    transition-property: color, border-color, filter, transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in;
+    outline: $brd-w solid;
+    border-width:$brd-w;
+    font-weight:bold;
+
+    &:hover, &:focus-visible {
+        filter:brightness(1.1);
+        transform:scale(1.03);
+    }
+
+    &:active {
+        filter: brightness(.98);
+        transform:scale(.98);
+    }
+}
+
+.button--primary {
+    @extend .button;
+    outline-color: $acc-prim;
+    background-color: $acc-prim;
+    color: $fnt-light;
+
+    &:hover, &:focus-visible {
+        border-color: white;
+    }
+}
+
+.button--secondary {
+    @extend .button;
+    outline: none;
+    border-color:$acc-prim;
+    background-color: white;
+    color: $fnt-dark;
+
+    &:hover, &:focus-visible {
+        color: red;
+        border-color: red;
+    }
+}

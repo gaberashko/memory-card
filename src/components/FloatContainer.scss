@@ -1,0 +1,9 @@
+@use "../styles/abstracts/index" as *;
+
+.floatContainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left:$s-pd;
+    gap:$s-pd;
+}

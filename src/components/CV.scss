@@ -1,0 +1,85 @@
+@use "../styles/abstracts/index" as *;
+
+section:not(:first-child) {
+    margin-top: $s-pd;
+}
+
+article {
+    display: grid;
+    grid-template-columns:1fr auto;
+    line-height:1.1;
+    margin: 0 $xs-pd;
+
+    &:not(:last-child) {
+        margin-bottom: $xs-pd;
+    }
+}
+
+
+ul {
+    margin-top: $xxs-pd;
+    padding-left:$s-pd;
+    line-height:1.2;
+    list-style-position:outside;
+}
+
+.CV {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    overflow-x: visible;
+    text-overflow: ellipsis;
+    padding:$l-pd $m-pd;
+    max-width: 800px;
+
+    .CV__header {
+        text-align:center;
+    }
+
+    .CV__contact {
+        display: flex;
+        justify-content: center;
+        gap: $m-pd;
+    }
+
+    .justify-end {
+        justify-self:end;
+    }
+    
+    .CV__skills {
+        article {
+            margin-bottom: 0;
+        }
+    }
+
+    * {
+        overflow-x:visible;
+        text-overflow: ellipsis;
+    }
+
+    h1 {
+        font-size:$xxl-fnt;
+        font-weight: normal;
+    }
+
+    h2 {
+        font-size:$m-fnt;
+        font-weight: normal;
+    }
+
+    h3 {
+        font-size: $s-fnt;
+    }
+
+    p {
+        font-size:$s-fnt;
+    }
+
+    ul {
+        grid-column: 1/3;
+    }
+
+    hr {
+        background-color: $fnt-dark;
+        height:1px;
+        margin: $xxs-pd 0;
+    }
+}
